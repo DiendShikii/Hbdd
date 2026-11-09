@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Hbd</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Patrick+Hand&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <section class="stage show" id="cakeStage">
+    <div class="room-glow"></div>
+
+    <svg id="cake" viewBox="0 0 400 460">
+      <defs>
+        <radialGradient id="g">
+          <stop offset="0" stop-color="#ffd45a" stop-opacity=".8" />
+          <stop offset="1" stop-color="#ffd45a" stop-opacity="0" />
+        </radialGradient>
+        <pattern id="pO" width="16" height="16" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">
+          <rect width="16" height="16" fill="#f58a35" /><rect width="16" height="8" fill="#ffc07a" />
+        </pattern>
+        <pattern id="pB" width="16" height="16" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">
+          <rect width="16" height="16" fill="#2a9fd6" /><rect width="16" height="8" fill="#8fd6f2" />
+        </pattern>
+        <pattern id="pR" width="16" height="16" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">
+          <rect width="16" height="16" fill="#d3303f" /><rect width="16" height="8" fill="#f27a86" />
+        </pattern>
+        <linearGradient id="fOut" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#ffb43a" /><stop offset="1" stop-color="#f58a1f" />
+        </linearGradient>
+        <linearGradient id="fIn" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#ffe27a" /><stop offset="1" stop-color="#fff3c4" />
+        </linearGradient>
+        <radialGradient id="eg">
+          <stop offset="0" stop-color="#ff7a2a" stop-opacity=".9" />
+          <stop offset="1" stop-color="#ff4a10" stop-opacity="0" />
+        </radialGradient>
+        <filter id="smokeBlur" x="-250%" y="-250%" width="600%" height="600%">
+          <feGaussianBlur stdDeviation="2.4" />
+        </filter>
+      </defs>
+
+      <g stroke="#1f1410" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+        <!-- Piring biru -->
+        <ellipse cx="200" cy="426" rx="190" ry="28" fill="#1b86b0" />
+        <ellipse cx="200" cy="414" rx="190" ry="28" fill="#2a9fc9" />
+
+        <!-- Tingkat bawah -->
+        <path d="M55 300V382Q55 410 200 410Q345 410 345 382V300Z" fill="#b8704a" />
+        <path d="M55 386Q127 402 200 390Q273 378 345 390" fill="none" stroke="#1f1410" stroke-width="13" />
+        <path d="M55 386Q127 402 200 390Q273 378 345 390" fill="none" stroke="#f2c94c" stroke-width="6" />
+        <path fill="#6b3a22" d="M55 300V325Q70 352 92 338Q108 328 124 350Q142 372 162 352Q178 342 196 362Q214 380 232 358Q246 342 262 350Q282 366 298 342Q312 326 328 340Q340 346 345 325V300Z" />
+        <ellipse cx="200" cy="300" rx="145" ry="34" fill="#8a4e2e" />
+        <g stroke="none"><rect x="88" y="312" width="14" height="6" rx="3" fill="#ff4f5e" transform="rotate(-25 95.0 315)" /><rect x="145" y="322" width="14" height="6" rx="3" fill="#ffc83a" transform="rotate(20 152.0 325)" /><rect x="236" y="322" width="14" height="6" rx="3" fill="#4aa8ff" transform="rotate(-12 243.0 325)" /><rect x="292" y="312" width="14" height="6" rx="3" fill="#ff9ab0" transform="rotate(30 299.0 315)" /><rect x="190" y="326" width="14" height="6" rx="3" fill="#5ccf7a" transform="rotate(0 197.0 329)" /><rect x="66" y="332" width="12" height="6" rx="3" fill="#ffc83a" transform="rotate(60 72.0 335)" /><rect x="318" y="338" width="12" height="6" rx="3" fill="#ff4f5e" transform="rotate(-50 324.0 341)" /></g>
+
+        <!-- Tingkat atas -->
+        <path d="M110 200V272Q110 297 200 297Q290 297 290 272V200Z" fill="#b8704a" />
+        <path d="M110 278Q155 290 200 280Q245 270 290 280" fill="none" stroke="#1f1410" stroke-width="13" />
+        <path d="M110 278Q155 290 200 280Q245 270 290 280" fill="none" stroke="#f2c94c" stroke-width="6" />
+        <path fill="#6b3a22" d="M110 200V215Q118 238 134 228Q148 220 160 238Q176 254 192 236Q206 222 220 238Q236 254 250 234Q262 222 274 236Q286 244 290 218V200Z" />
+        <ellipse cx="200" cy="200" rx="90" ry="22" fill="#8a4e2e" />
+        <g stroke="none"><rect x="128" y="198" width="12" height="6" rx="3" fill="#ffc83a" transform="rotate(-20 134.0 201)" /><rect x="172" y="208" width="12" height="6" rx="3" fill="#4aa8ff" transform="rotate(25 178.0 211)" /><rect x="228" y="206" width="12" height="6" rx="3" fill="#ff4f5e" transform="rotate(-15 234.0 209)" /><rect x="262" y="196" width="12" height="6" rx="3" fill="#ff9ab0" transform="rotate(10 268.0 199)" /><rect x="118" y="226" width="10" height="6" rx="3" fill="#4aa8ff" transform="rotate(60 123.0 229)" /></g>
+      </g>
+
+      <!-- Lilin -->
+      <g id="candles">
+        <g class="glows">
+          <circle class="gl" cx="150" cy="114" r="44" fill="url(#g)" />
+          <circle class="gl" cx="200" cy="104" r="44" fill="url(#g)" />
+          <circle class="gl" cx="250" cy="114" r="44" fill="url(#g)" />
+        </g>
+        <rect x="142" y="140" width="16" height="62" rx="3" fill="url(#pO)" stroke="#1f1410" stroke-width="3" />
+        <rect x="192" y="130" width="16" height="72" rx="3" fill="url(#pB)" stroke="#1f1410" stroke-width="3" />
+        <rect x="242" y="140" width="16" height="62" rx="3" fill="url(#pR)" stroke="#1f1410" stroke-width="3" />
+        <g class="flameG" data-x="150" data-y="134" transform="translate(150 134)">
+          <rect class="wick" x="-1" y="0" width="2" height="7" rx="1" fill="#2b1b14" />
+          <g class="lean">
+            <g class="flame" style="--fd:0.85s;--fdl:-0.2s">
+              <path fill="url(#fOut)" stroke="#1f1410" stroke-width="2.6" stroke-linejoin="round" d="M0 0C-8 -1 -11 -10 -7 -19C-4 -26 -1 -31 1 -40C5 -32 11 -25 10 -14C9 -6 6 0 0 0Z" />
+              <path fill="url(#fIn)" d="M0 -2C-4 -3 -5 -9 -3 -14C-1 -18 0 -21 1 -25C3 -20 6 -16 5 -10C4 -5 3 -2 0 -2Z" />
+            </g>
+          </g>
+          <g class="ember">
+            <circle r="9" fill="url(#eg)" />
+            <circle r="1.5" cy=".5" fill="#ff9a3c" />
+          </g>
+        </g>
+        <g class="flameG" data-x="200" data-y="124" transform="translate(200 124)">
+          <rect class="wick" x="-1" y="0" width="2" height="7" rx="1" fill="#2b1b14" />
+          <g class="lean">
+            <g class="flame" style="--fd:0.7s;--fdl:-0.5s">
+              <path fill="url(#fOut)" stroke="#1f1410" stroke-width="2.6" stroke-linejoin="round" d="M0 0C-8 -1 -11 -10 -7 -19C-4 -26 -1 -31 1 -40C5 -32 11 -25 10 -14C9 -6 6 0 0 0Z" />
+              <path fill="url(#fIn)" d="M0 -2C-4 -3 -5 -9 -3 -14C-1 -18 0 -21 1 -25C3 -20 6 -16 5 -10C4 -5 3 -2 0 -2Z" />
+            </g>
+          </g>
+          <g class="ember">
+            <circle r="9" fill="url(#eg)" />
+            <circle r="1.5" cy=".5" fill="#ff9a3c" />
+          </g>
+        </g>
+        <g class="flameG" data-x="250" data-y="134" transform="translate(250 134)">
+          <rect class="wick" x="-1" y="0" width="2" height="7" rx="1" fill="#2b1b14" />
+          <g class="lean">
+            <g class="flame" style="--fd:0.95s;--fdl:-0.1s">
+              <path fill="url(#fOut)" stroke="#1f1410" stroke-width="2.6" stroke-linejoin="round" d="M0 0C-8 -1 -11 -10 -7 -19C-4 -26 -1 -31 1 -40C5 -32 11 -25 10 -14C9 -6 6 0 0 0Z" />
+              <path fill="url(#fIn)" d="M0 -2C-4 -3 -5 -9 -3 -14C-1 -18 0 -21 1 -25C3 -20 6 -16 5 -10C4 -5 3 -2 0 -2Z" />
+            </g>
+          </g>
+          <g class="ember">
+            <circle r="9" fill="url(#eg)" />
+            <circle r="1.5" cy=".5" fill="#ff9a3c" />
+          </g>
+        </g>
+
+        <g id="smokeLayer" style="pointer-events:none"></g>
+        <rect id="hit" x="125" y="80" width="150" height="130" fill="transparent" />
+      </g>
+    </svg>
+
+    <div class="hint" id="cakeHint">Klik lilinnya untuk meniupnya</div>
+  </section>
+
+  <section class="stage" id="giftStage">
+
+    <svg id="gift" viewBox="0 0 300 300">
+      <ellipse cx="150" cy="268" rx="120" ry="12" fill="#000" opacity=".25" />
+      <g id="giftWrap">
+        <!-- Bagian dalam kotak -->
+        <polygon id="inside" points="70,144 230,144 215,132 85,132" fill="#7a0c16" />
+
+        <!-- Badan kotak -->
+        <rect x="70" y="144" width="160" height="120" fill="#d11322" stroke="#1a1a1a" stroke-width="4" stroke-linejoin="round" />
+        <rect x="212" y="146" width="16" height="116" fill="#8f0c18" />
+        <rect x="136" y="144" width="28" height="120" fill="#ffe01a" stroke="#1a1a1a" stroke-width="4" stroke-linejoin="round" />
+        <rect x="156" y="146" width="6" height="116" fill="#c9a800" />
+        <g stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".9">
+          <path d="M88 160V200" /><path d="M88 214V218" /><path d="M88 232V252" />
+        </g>
+
+        <!-- Tutup + pita -->
+        <g id="lid">
+          <rect x="58" y="112" width="184" height="34" rx="5" fill="#d11322" stroke="#1a1a1a" stroke-width="4" stroke-linejoin="round" />
+          <rect x="228" y="114" width="12" height="30" fill="#8f0c18" />
+          <rect x="136" y="112" width="28" height="34" fill="#ffe01a" stroke="#1a1a1a" stroke-width="4" stroke-linejoin="round" />
+          <g stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".9"><path d="M74 122V130" /><path d="M74 138V139" /></g>
+          <path d="M148 116L108 136L126 138L112 158L152 130Z" fill="#ffe01a" stroke="#1a1a1a" stroke-width="4" stroke-linejoin="round" />
+          <path d="M152 116L192 136L174 138L188 158L148 130Z" fill="#f2cd00" stroke="#1a1a1a" stroke-width="4" stroke-linejoin="round" />
+          <path d="M150 112C128 56 76 62 88 94C96 114 134 118 150 112Z" fill="#ffe01a" stroke="#1a1a1a" stroke-width="4" stroke-linejoin="round" />
+          <path d="M150 112C172 56 224 62 212 94C204 114 166 118 150 112Z" fill="#f2cd00" stroke="#1a1a1a" stroke-width="4" stroke-linejoin="round" />
+          <path d="M104 80Q100 92 106 96" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" />
+          <rect x="134" y="94" width="32" height="26" rx="7" fill="#ffe01a" stroke="#1a1a1a" stroke-width="4" stroke-linejoin="round" />
+        </g>
+      </g>
+    </svg>
+
+    <div class="hint" id="giftHint">Ada kado untukmu! Ketuk kadonya untuk membukanya.</div>
+  </section>
+
+  <section class="stage" id="cardStage">
+    <img class="card-img" src="Hbd.jpeg" alt="Kartu ucapan Happy Birthday">
+  </section>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
